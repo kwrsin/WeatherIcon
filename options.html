@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="UTF-8"><title>オプション</title>
+<script src="jquery-1.10.0.min.js"></script>
+<script src="background.js"></script>
+</head>
+<body>
+場所:
+<select id="place">
+<optgroup label="道北">
+  <option value="011000">稚内</option>
+  <option value="012010">旭川</option>
+  <option value="012020">留萌</option>
+</optgroup>
+<optgroup label="道東">
+  <option value="013010">網走</option>
+  <option value="013020">北見</option>
+  <option value="013030">紋別</option>
+  <option value="014010">根室</option>
+  <option value="014020">釧路</option>
+  <option value="014030">帯広</option>
+</optgroup>
+<optgroup label="道南">
+  <option value="015010">室蘭</option>
+  <option value="015020">浦河</option>
+</optgroup>
+<optgroup label="道央">
+  <option value="016010">札幌</option>
+  <option value="016020">岩見沢</option>
+  <option value="016030">倶知安</option>
+</optgroup>
+<optgroup label="道南">
+  <option value="017010">函館</option>
+  <option value="017020">江差</option>
+</optgroup>
+<optgroup label="青森県">
+  <option value="020010">青森</option>
+  <option value="020020">むつ</option>
+  <option value="020030">八戸</option>
+</optgroup>
+<optgroup label="岩手県">
+  <option value="030010">盛岡</option>
+  <option value="030020">宮古</option>
+  <option value="030030">大船渡</option>
+</optgroup>
+<optgroup label="宮城県">
+  <option value="040010">仙台</option>
+  <option value="040020">白石</option>
+</optgroup>
+<optgroup label="秋田県">
+  <option value="050010">秋田</option>
+  <option value="050020">横手</option>
+</optgroup>
+<optgroup label="山形県">
+  <option value="060010">山形</option>
+  <option value="060020">米沢</option>
+  <option value="060030">酒田</option>
+  <option value="060040">新庄</option>
+</optgroup>
+<optgroup label="福島県">
+  <option value="070010">福島</option>
+  <option value="070020">小名浜</option>
+  <option value="070030">若松</option>
+</optgroup>
+<optgroup label="茨城県">
+  <option value="080010">水戸</option>
+  <option value="080020">土浦</option>
+</optgroup>
+<optgroup label="栃木県">
+  <option value="090010">宇都宮</option>
+  <option value="090020">大田原</option>
+</optgroup>
+<optgroup label="群馬県">
+  <option value="100010">前橋</option>
+  <option value="100020">みなかみ</option>
+</optgroup>
+<optgroup label="埼玉県">
+  <option value="110010">さいたま</option>
+  <option value="110020">熊谷</option>
+  <option value="110030">秩父</option>
+</optgroup>
+<optgroup label="千葉県">
+  <option value="120010">千葉</option>
+  <option value="120020">銚子</option>
+  <option value="120030">館山</option>
+</optgroup>
+<optgroup label="東京都">
+  <option value="130010">東京</option>
+  <option value="130020">大島</option>
+  <option value="130030">八丈島</option>
+  <option value="130040">父島</option>
+</optgroup>
+<optgroup label="神奈川県">
+  <option value="140010">横浜</option>
+  <option value="140020">小田原</option>
+</optgroup>
+<optgroup label="新潟県">
+  <option value="150010">新潟</option>
+  <option value="150020">長岡</option>
+  <option value="150030">高田</option>
+  <option value="150040">相川</option>
+</optgroup>
+<optgroup label="富山県">
+  <option value="160010">富山</option>
+  <option value="160020">伏木</option>
+</optgroup>
+<optgroup label="石川県">
+  <option value="170010">金沢</option>
+  <option value="170020">輪島</option>
+</optgroup>
+<optgroup label="福井県">
+  <option value="180010">福井</option>
+  <option value="180020">敦賀</option>
+</optgroup>
+<optgroup label="山梨県">
+  <option value="190010">甲府</option>
+  <option value="190020">河口湖</option>
+</optgroup>
+<optgroup label="長野県">
+  <option value="200010">長野</option>
+  <option value="200020">松本</option>
+  <option value="200030">飯田</option>
+</optgroup>
+<optgroup label="岐阜県">
+  <option value="210010">岐阜</option>
+  <option value="210020">高山</option>
+</optgroup>
+<optgroup label="静岡県">
+  <option value="220010">静岡</option>
+  <option value="220020">網代</option>
+  <option value="220030">三島</option>
+  <option value="220040">浜松</option>
+</optgroup>
+<optgroup label="愛知県">
+  <option value="230010">名古屋</option>
+  <option value="230020">豊橋</option>
+</optgroup>
+<optgroup label="三重県">
+  <option value="240010">津</option>
+  <option value="240020">尾鷲</option>
+</optgroup>
+<optgroup label="滋賀県">
+  <option value="250010">大津</option>
+  <option value="250020">彦根</option>
+</optgroup>
+<optgroup label="京都府">
+  <option value="260010">京都</option>
+  <option value="260020">舞鶴</option>
+</optgroup>
+<optgroup label="大阪府">
+  <option value="270000">大阪</option>
+</optgroup>
+<optgroup label="兵庫県">
+  <option value="280010">神戸</option>
+  <option value="280020">豊岡</option>
+</optgroup>
+<optgroup label="奈良県">
+  <option value="290010">奈良</option>
+  <option value="290020">風屋</option>
+</optgroup>
+<optgroup label="和歌山県">
+  <option value="300010">和歌山</option>
+  <option value="300020">潮岬</option>
+</optgroup>
+<optgroup label="鳥取県">
+  <option value="310010">鳥取</option>
+  <option value="310020">米子</option>
+</optgroup>
+<optgroup label="島根県">
+  <option value="320010">松江</option>
+  <option value="320020">浜田</option>
+  <option value="320030">西郷</option>
+</optgroup>
+<optgroup label="岡山県">
+  <option value="330010">岡山</option>
+  <option value="330020">津山</option>
+</optgroup>
+<optgroup label="広島県">
+  <option value="340010">広島</option>
+  <option value="340020">庄原</option>
+</optgroup>
+<optgroup label="山口県">
+  <option value="350010">下関</option>
+  <option value="350020">山口</option>
+  <option value="350030">柳井</option>
+  <option value="350040">萩</option>
+</optgroup>
+<optgroup label="徳島県">
+  <option value="360010">徳島</option>
+  <option value="360020">日和佐</option>
+</optgroup>
+<optgroup label="香川県">
+  <option value="370000">高松</option>
+</optgroup>
+<optgroup label="愛媛県">
+  <option value="380010">松山</option>
+  <option value="380020">新居浜</option>
+  <option value="380030">宇和島</option>
+</optgroup>
+<optgroup label="高知県">
+  <option value="390010">高知</option>
+  <option value="390020">室戸岬</option>
+  <option value="390030">清水</option>
+</optgroup>
+<optgroup label="福岡県">
+  <option value="400010">福岡</option>
+  <option value="400020">八幡</option>
+  <option value="400030">飯塚</option>
+  <option value="400040">久留米</option>
+</optgroup>
+<optgroup label="佐賀県">
+  <option value="410010">佐賀</option>
+  <option value="410020">伊万里</option>
+</optgroup>
+<optgroup label="長崎県">
+  <option value="420010">長崎</option>
+  <option value="420020">佐世保</option>
+  <option value="420030">厳原</option>
+  <option value="420040">福江</option>
+</optgroup>
+<optgroup label="熊本県">
+  <option value="430010">熊本</option>
+  <option value="430020">阿蘇乙姫</option>
+  <option value="430030">牛深</option>
+  <option value="430040">人吉</option>
+</optgroup>
+<optgroup label="大分県">
+  <option value="440010">大分</option>
+  <option value="440020">中津</option>
+  <option value="440030">日田</option>
+  <option value="440040">佐伯</option>
+</optgroup>
+<optgroup label="宮崎県">
+  <option value="450010">宮崎</option>
+  <option value="450020">延岡</option>
+  <option value="450030">都城</option>
+  <option value="450040">高千穂</option>
+</optgroup>
+<optgroup label="鹿児島県">
+  <option value="460010">鹿児島</option>
+  <option value="460020">鹿屋</option>
+  <option value="460030">種子島</option>
+  <option value="460040">名瀬</option>
+</optgroup>
+<optgroup label="沖縄県">
+  <option value="471010">那覇</option>
+  <option value="471020">名護</option>
+  <option value="471030">久米島</option>
+  <option value="472000">南大東</option>
+  <option value="473000">宮古島</option>
+  <option value="474010">石垣島</option>
+  <option value="474020">与那国島</option>
+</optgroup>
+</select>
+
+<br>
+<div id="status"></div>
+<button id="save">保存</button>
+</body>
+
+<script src="options.js"></script>
+
+</html> 
