@@ -6,7 +6,7 @@ Google Chromeブラウザのエクステンション。アイコンでお天気�
 ライブドアのお天気情報サービスを利用して情報提供します。
 
 [インストール]
-weatherIcon.crxをダウンロードします。Chromeを起動しておき、ダウンロードしたweatherIcon.crxを
+weatherIcon.crxをダウンロードします（上の「ZIP」ボタンから取得します。weatherIcon.crx以外は不要なので削除してください。）。Chromeを起動しておき、ダウンロードしたweatherIcon.crxを
 Chromeへドラッグアンドドラックします。インストールのプロンプトが表示されるので追加を押します。
 
 [アンインストール]
