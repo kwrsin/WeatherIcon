@@ -17,6 +17,7 @@ function initialize() {
   var place = localStorage["place"];
   if (!place) {
     place = "400010";
+    localStorage["place"] = place;
   }
   getWeatherInfomation(place, 1);
 

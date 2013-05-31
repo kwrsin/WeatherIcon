@@ -33,7 +33,7 @@ function getWeatherInfomation(cd, type) {
   var htmlText = "<tr>";
   var len = ent.length;
   for (var i = 0; i < len; i++) {
-    htmlText += "<td>";
+    htmlText += "<td class='cls0'>";
     htmlText += getWeatherDate(ent[i]);
     htmlText += "</td>";
   };
@@ -42,7 +42,7 @@ function getWeatherInfomation(cd, type) {
 
   htmlText += "<tr>";
   for (var i = 0; i < len; i++) {
-    htmlText += "<td>";
+    htmlText += "<td class='cls0'>";
     htmlText += getWeatherDateLabel(ent[i]);
     htmlText += "</td>";
   };
@@ -50,7 +50,7 @@ function getWeatherInfomation(cd, type) {
 
   htmlText += "<tr>";
   for (var i = 0; i < len; i++) {
-    htmlText += "<td><img src='";
+    htmlText += "<td class='cls0'><img class='clsImg' src='";
     htmlText += "large/" + getImage(ent[i]);
     htmlText += "'/></td>";
   };
@@ -58,7 +58,7 @@ function getWeatherInfomation(cd, type) {
 
   htmlText += "<tr>";
   for (var i = 0; i < len; i++) {
-    htmlText += "<td>";
+    htmlText += "<td class='cls0'>";
     htmlText += getWeatherState(ent[i]);
     htmlText += "</td>";
   };
@@ -66,15 +66,15 @@ function getWeatherInfomation(cd, type) {
 
   htmlText += "<tr>";
   for (var i = 0; i < len; i++) {
-    htmlText += "<td>";
-    htmlText += getWeatherMaxDegree(ent[i]);
+    htmlText += "<td class='cls0'>";
+    htmlText += getWeatherMaxDegree(ent[i]) + "<img src='up.png'>&nbsp;&nbsp;" + getWeatherMinDegree(ent[i]) + "<img src='down.png'>";
     htmlText += "</td>";
   };
 
   htmlText += "</tr>";
-  var ti = "<tr><td colspan='" + len + "'>" + obj.title + "</td></tr>";
-  var desp = "<tr><td colspan='" + len + "'>" + getText(obj.description) + "</td></tr>";
-  var link = "<tr><td cospan='" + len + "'><a target='_blank' href='" + obj.link + "'>詳細</a></td></tr>";
+  var ti = "<tr><td  class='cls3' colspan='" + len + "'>" + obj.title + "</td></tr>";
+  var desp = "<tr><td class='cls1' colspan='" + len + "'>" + getText(obj.description) + "</td></tr>";
+  var link = "<tr><td class='cls2' colspan='" + len + "'><a target='_blank' href='" + obj.link + "'>詳細</a></td></tr>";
 
   var begin = "<table>";
   var end = "</table>";
@@ -120,6 +120,22 @@ function getWeatherMaxDegree(ent) {
   if (ent) {
     try {
       value = ent.temperature.max.celsius;
+      if (value) {
+        value += "℃"
+      };
+    }catch(e){}
+  }
+  return value;
+}
+
+function getWeatherMinDegree(ent) {
+  var value = "";
+  if (ent) {
+    try {
+      value = ent.temperature.min.celsius;
+      if (value) {
+        value += "℃"
+      };
     }catch(e){}
   }
   return value;
@@ -161,3 +177,4 @@ function getImage(ent) {
 document.addEventListener('DOMContentLoaded', function () {
   initialize();
 });
+  
